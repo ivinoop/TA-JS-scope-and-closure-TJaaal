@@ -1,6 +1,6 @@
 1. What does thread of execution means in JavaScript?
 
-- Thread of execution means a single unit of code that is being executed by the JavaScript engine. Each function / block of code is a thread in JS.
+- Thread of execution means a single unit of code that is being executed by the JavaScript engine. Each line of code is a thread in JS. 
 
 2. Where the JavaScript code gets executed?
 
