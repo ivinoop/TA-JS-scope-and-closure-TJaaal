@@ -68,12 +68,12 @@ function main() {
     console.log(two); // Two
     console.log(three); // Three
   }
-  console.log(four); // Undefined Error
+  console.log(four); // Undefined error
   inner();
 }
 
 main();
-console.log(one, two, three, four); // Undefined Error
+console.log(one, two, three, four); // Undefined error
 ```
 
 <!-- Put your image below -->
