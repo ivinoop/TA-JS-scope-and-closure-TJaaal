@@ -6,10 +6,10 @@ Example:
 function hello() {
   var username = 'Arya';
 }
-console.log(useranme); // output
+console.log(username); // ReferenceError: username is not defined
 ```
 
-In above code we are looking for the variable named `usename`. There is no variable named `username` in the global scope. The variable is inside the function named `hello` and we can't access the variable defined inside a function from outside.
+In above code we are looking for the variable named `username`. There is no variable named `username` in the global scope. The variable is inside the function named `hello` and we can't access the variable defined inside a function from outside.
 
 The above code will throw an error `Reference Error username is not defined`.
 
@@ -19,8 +19,12 @@ The above code will throw an error `Reference Error username is not defined`.
 {
   const username = 'Arya';
 }
-console.log(useranme); // output
+console.log(useranme); // ReferenceError: username is not defined
 ```
+
+In above code we are looking for the variable named `username`. There is no variable named `username` in the global scope. The variable is inside a block, i.e., an unnamed object, and we can't access the variable from outside.
+
+The above code will throw an error `Reference Error username is not defined`.
 
 3. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
 
@@ -31,14 +35,22 @@ if (true) {
 console.log(useranme); // output
 ```
 
+In above code we are looking for the variable named `username`. There is no variable named `username` in the global scope. The variable is inside a block, i.e., an `if` statement, and we can't access the variable from outside.
+
+The above code will throw an error `Reference Error username is not defined`.
+
 4. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
 
 ```js
 if (true) {
   var username = 'Arya';
 }
-console.log(useranme); // output
+console.log(useranme); // Arya
 ```
+
+In above code we are looking for the variable named `username`. There is no variable named `username` in the global scope. But the variable is declared with `var` so it can be accessed from outside the block as well.
+
+The above code will return `Arya` as output.
 
 5. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
 
