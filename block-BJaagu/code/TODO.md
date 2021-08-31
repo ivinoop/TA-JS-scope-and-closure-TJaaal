@@ -1,7 +1,7 @@
 Find the output of the code snippets below:
 
 ```js
-console.log(numA + numB); // 51
+console.log(numA + numB); // undefined + undefined = NaN
 var numA = 21,
   numB = 30;
 ```
@@ -124,5 +124,5 @@ let sayHello = () => {
   console.log(username);
   let username = "John";
 };
-sayHello(); // undefined
+sayHello(); // ReferenceError: Cannot access 'username' before initialization
 ```
