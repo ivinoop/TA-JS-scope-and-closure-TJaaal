@@ -68,4 +68,5 @@ let counter = function () {
   }
   return increment();
 };
+// Throws an error
 ```
