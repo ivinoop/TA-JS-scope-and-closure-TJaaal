@@ -9,13 +9,15 @@ function multiplyArrayByN(arr, cb) {
     finalArr.push(cb(elm));
   }
   return finalArr;
-}
+} //Higher Order Function
+
 function addFive(n) {
   return n + 5;
-}
+} // CB function
 function multiplyBy5(n) {
   return n * 5;
-}
+} // CB function
+
 let numbersAddedFive = multiplyArrayByN(marks, addFive);
 let numbersMultipliedBy5 = multiplyArrayByN(marks, multiplyBy5);
 ```
