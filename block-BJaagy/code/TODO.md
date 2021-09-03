@@ -1,5 +1,21 @@
 1. Create a function by your choice that accepts a callback function.
 
+```js
+let numbers = [1, 2, 3, 4, 5];
+
+function isOdd(array, oddArr = []) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 !== 0) {
+      oddArr.push(array[i]);
+    }
+  }
+  return oddArr;
+}
+
+let oddArray = isOdd(numbers);
+console.log(oddArray);
+```
+
 2. Create a function by you choice that returns a function reference.
 
 3. Create a higher order function called `map` that takes two inputs:
