@@ -29,6 +29,8 @@ counter.decrement(); // output
 counter.value(); // output
 ```
 
+![](/code/img/img-1.png)
+
 2. Create the execution context diagram and write the output.
 
 ```js
