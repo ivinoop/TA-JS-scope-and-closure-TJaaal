@@ -10,8 +10,11 @@
 **You can use normal for loop for this function**
 
 ```js
-function loop() {
+function loop(start, test, iterate, bodyFn) {
   // Your code goes here
+  for(let i = start; test(i); i = iterate(i)) {
+    bodyFn(i);
+  }
 }
 
 loop(
