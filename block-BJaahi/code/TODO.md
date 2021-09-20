@@ -254,14 +254,15 @@ function sayHi(name) {
 // Your code goes here
 // Declaration Phase
 function sayHi(name) {
-  console.log(name);
-  console.log(age);
-  var name = 'Lydia';
-  let age = 21;
+  var name = undefined;
+  let age;
 }
 
 // Execution Phase 
-sayHi();
+console.log(name);
+console.log(age);
+name = 'Lydia';
+age = 21;
 ```
 
 8.
