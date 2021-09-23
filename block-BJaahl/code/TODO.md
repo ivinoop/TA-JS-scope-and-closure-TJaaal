@@ -2,7 +2,13 @@
 
 ```js
 function once(cb) {
-  // your code goes here
+  let isCalled = false;
+  return function() {
+    if(isCalled === false) {
+      cb();
+      isCalled = true;
+    }
+  };
 }
 
 // TEST
@@ -11,20 +17,26 @@ function sayHello() {
 }
 let log = once(sayHello);
 log(); // alert message "You can only call me once!"
-log(); // return undefinde (can't be called twice)
+log(); // return undefined (can't be called twice)
 ```
 
 2. Change the above function in such a way that the function accepts two parameter a callback function and parameter for the callback function. When calling the function pass the parameters.
 
 ```js
-function once(cb) {
-  // your code goes here
+function once(cb, param) {
+  let isCalled = false;
+  return function() {
+    if(isCalled === false) {
+      cb(param);
+      isCalled = true;
+    }
+  };
 }
 
 // TEST
 let log = once(console.log, 'Hello Console');
 log(); // log message "Hello Console"
-log(); // return undefinde (can't be called twice)
+log(); // return undefined (can't be called twice)
 ```
 
 3. Change the above function in such a way that it can accept `n` number of parameters for the callback function.
@@ -34,21 +46,29 @@ log(); // return undefinde (can't be called twice)
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
 
 ```js
-function once(cb) {
-  // your code goes here
+function once(cb, ...params) {
+  let isCalled = false;
+  return function() {
+    if(isCalled === false) {
+      cb(...params);
+      isCalled = true;
+    } else {
+      alert("You can't call the  function again!");
+    }
+  };
 }
 
 // TEST
 let log = once(console.log, 'Message one', 'Message Two');
 log(); // log message "Message One Message Two"
-log(); // return undefinde (can't be called twice)
+log(); // return undefined (can't be called twice)
 ```
 
 4. Create a new function `nTimes` whose 1st parameter is a callback function, 2nd parameter is the number of times the function should be called and 3rd ... nth parameter should be passed to the callback function.
 
 ```js
 function nTimes(cb, times, ...rest) {
-  // your code goes here
+  
 }
 
 // TEST
