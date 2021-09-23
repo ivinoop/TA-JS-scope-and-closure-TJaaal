@@ -68,7 +68,15 @@ log(); // return undefined (can't be called twice)
 
 ```js
 function nTimes(cb, times, ...rest) {
-  
+  let numberOfTimesCalled = 0;
+  return function() {
+    if(numberOfTimesCalled >= times) {
+      alert(`You cannot call this function more than ${times} times!`);
+    } else {
+      cb(...rest);
+      numberOfTimesCalled += 1;
+    }
+  };
 }
 
 // TEST
@@ -77,5 +85,5 @@ let logThreeTimes = nTimes(log, 3, 'Hello Arya');
 logThreeTimes(); // log message "Hello Arya" (1)
 logThreeTimes(); // log message "Hello Arya" (2)
 logThreeTimes(); // log message "Hello Arya" (3)
-log(); // return undefinde (can't be called)
+log(); // return undefined (can't be called)
 ```
